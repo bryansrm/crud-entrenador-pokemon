@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Route::get('trainers/create', 'TrainerController@create');
+// Route::get('/trainers/create', function(){
+//     return view('trainers.create');
+// });
+Route::resource('trainers', 'TrainerController');
