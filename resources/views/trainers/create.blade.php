@@ -3,11 +3,17 @@
 @section('title', 'Trainer Create')
 
 @section('content')
-    <form class="form-group" method="POST" action="/trainers">
+    <form class="form-group" method="POST" action="/trainers" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <label for="exampleInputEmail1">Nombre</label>
             <input type="text" class="form-control" id="name" name="name" placeholder="Nombres">
+            {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
+        </div>
+
+        <div class="form-group">
+            <label for="file_avatar">Avatar</label>
+            <input type="file"  id="file_avatar" name="file_avatar" >
             {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
         </div>
         {{-- <div class="form-group">
