@@ -15,7 +15,10 @@ class TrainerController extends Controller
      */
     public function index()
     {
-        return view('trainers.index');
+        $trainers = Trainer::all();
+        return view('trainers.index', compact(
+            'trainers'
+        ));
     }
 
     /**
