@@ -39,8 +39,16 @@ class TrainerController extends Controller
      */
     public function store(Request $request)
     {
+        //return $request;
+        if($request->hasFile('avatar')){
+            $file =  $request->file('avatar');
+            $name = time().$file->getClientOriginalName();
+            $file->move(public_path().'/imagenes/', $name);
+        }
+
         $trainer = new Trainer();
         $trainer->name = $request->input('name');
+        $trainer->avatar = $name;
         $trainer->save();
 
         return 'saved';

@@ -12,8 +12,8 @@
         </div>
 
         <div class="form-group">
-            <label for="file_avatar">Avatar</label>
-            <input type="file"  id="file_avatar" name="file_avatar" >
+            <label for="avatar">Avatar</label>
+            <input type="file"  id="avatar" name="avatar" >
             {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
         </div>
         {{-- <div class="form-group">
